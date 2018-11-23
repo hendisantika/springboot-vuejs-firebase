@@ -72,6 +72,10 @@
                 await axios.post('http://localhost:8080/', this.request);
                 await this.refresh()
             },
+            deleteCurrency: async function (id) {
+                await axios.delete('http://localhost:8080/' + id);
+                await this.refresh()
+            },
         }
     }
 </script>

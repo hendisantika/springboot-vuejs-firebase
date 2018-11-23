@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.11",
+    "firebase": "^5.5.9",
     "vue": "^2.5.17"
   },
   "devDependencies": {

@@ -27,6 +27,15 @@
                     <el-table-column label=" currency name " prop="name " width=" 300 "/>
                     <el-table-column label="currency units" prop="Symbol" width="300"/>
                     <el-table-column label="quantity" prop="Amount" width="300"/>
+                    <el-table-column align="left" label="Ops" prop="operation" width="200">
+                        <template slot-scope="scope">
+                            <el-button
+                                    @click="deleteCurrency(scope.row.id)"
+                                    size="Mini"
+                                    type="Danger"> x
+                            </el-button>
+                        </template>
+                    </el-table-column>
 
                 </el-table>
             </el-card>

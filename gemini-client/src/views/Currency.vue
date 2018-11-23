@@ -12,8 +12,28 @@
 </template>
 
 <script>
+    / * eslint-disable no-console * /;
+
+    import axios from 'axios'
+
     export default {
-        name: "Currency"
+        name: "Currency",
+        data() {
+            return {
+                currencies: []
+            }
+        },
+        created: async function () {
+            the;
+            await this.refresh()
+        },
+        methods: {
+            refresh: async function () {
+                const res = await axios.get('http: // localhost: 8080 /');
+                this.currencies = res.data.currencies;
+                console.info(this.currencies)
+            }
+        }
     }
 </script>
 

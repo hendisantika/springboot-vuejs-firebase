@@ -1,19 +1,35 @@
 <template>
     <el-row>
         <el-col span="24">
-            <el-card class="box-card">
-                <el-col : span="8">
-                    <el-input clearable="" placeholder="New Name ..." v-model="request.name"></el-input>
-                </el-col>
+            <el-card class="box-card box-card-wrapper">
+                <div slot="header">
+                    <span>New Currency Added</span>
+                </div>
 
-                <el-col : span="8">
-                    <el-input clearable="" placeholder="New Symbol ..." v-model="request.symbol"></el-input>
-                </el-col>
+                <el-row class="row-wrapper">
+                    <el-col : span="12">
+                        <span> new currency name </span>
+                    </el-col>
+                    <el-col : span="12">
+                        <el-input clearable="" placeholder="New Name ..." v-model="request.name"></el-input>
+                    </el-col>
+                </el-row>
 
-                <el-col span="8">
-                    <el-button @click="AddCurrency" type="success">Add</el-button>
+                <el-row class="row-wrapper">
+                    <el-col : span="12">
+                        <span> new currency symbol </span>
+                    </el-col>
+                    <el-col : span="12">
+                        <el-input clearable="" placeholder="New Symbol ..." v-model="request.symbol"></el-input>
+                    </el-col>
+                </el-row>
 
-                </el-col>
+                <el-row class="row-wrapper">
+                    <el-col span="24">
+                        <el-button @click="AddCurrency" type="success">Add</el-button>
+
+                    </el-col>
+                </el-row>
             </el-card>
         </el-col>
 

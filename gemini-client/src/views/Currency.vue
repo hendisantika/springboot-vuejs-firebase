@@ -86,11 +86,21 @@
             },
             addCurrency: async function () {
                 await axios.post('http://localhost:8080/', this.request);
-                await this.refresh()
+                await this.refresh();
+                this.$message({
+                    showClose: true,
+                    message: 'Add Currency Success!',
+                    type: 'success'
+                })
             },
             deleteCurrency: async function (id) {
                 await axios.delete('http://localhost:8080/' + id);
-                await this.refresh()
+                await this.refresh();
+                this.$message({
+                    showClose: true,
+                    message: 'Delete Currency Success!',
+                    type: 'success'
+                })
             },
         }
     }

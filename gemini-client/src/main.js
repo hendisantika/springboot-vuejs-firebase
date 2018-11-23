@@ -11,12 +11,12 @@ Vue.config.productionTip = false;
 Vue.use(ElementUI, {locale});
 
 var config = {
-    apiKey: "************************",
-    authDomain: "************** Firebaseapp.Com ********** ".,
-    DatabaseURL: ". ************************ Firebaseio.Com ",
-    ProjectId: "************************",
-    storageBucket: "******************* *****. appspot.com ",
-    messagingSenderId: " ************************ "
+    apiKey: "AIzaSyDH_QFL1NXy8H8Lw4JIgGYFwc6xR2KhaGE",
+    authDomain: "gemini-e2c6d.firebaseapp.com",
+    databaseURL: "https://gemini-e2c6d.firebaseio.com",
+    projectId: "gemini-e2c6d",
+    storageBucket: "gemini-e2c6d.appspot.com",
+    messagingSenderId: "1066268677949"
 };
 firebase.initializeApp(config);
 

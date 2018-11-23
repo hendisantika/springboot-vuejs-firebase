@@ -1,11 +1,17 @@
 <template>
     <el-row>
-        <el-col : Span="24">
-            <el-card Class="Box-Card">
-                <div Class="Clearfix" Slot="Header">
+        <el-col : span="24">
+            <el-card class="box-card">
+                <div class="clearfix" slot="header">
                     <span> virtual currency List </span>
                 </div>
-                <div> ...</div>
+                <el-table : data="currencies" style="width: 100%">
+                    <el-table-column label="currency ID" prop="Id" width="300"/>
+                    <el-table-column label=" currency name " prop="name " width=" 300 "/>
+                    <el-table-column label="currency units" prop="Symbol" width="300"/>
+                    <el-table-column label="quantity" prop="Amount" width="300"/>
+
+                </el-table>
             </el-card>
         </el-col>
     </el-row>
@@ -24,7 +30,6 @@
             }
         },
         created: async function () {
-            the;
             await this.refresh()
         },
         methods: {

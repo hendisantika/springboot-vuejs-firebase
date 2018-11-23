@@ -1,5 +1,22 @@
 <template>
     <el-row>
+        <el-col span="24">
+            <el-card class="box-card">
+                <el-col : span="8">
+                    <el-input clearable="" placeholder="New Name ..." v-model="request.name"></el-input>
+                </el-col>
+
+                <el-col : span="8">
+                    <el-input clearable="" placeholder="New Symbol ..." v-model="request.symbol"></el-input>
+                </el-col>
+
+                <el-col span="8">
+                    <el-button @click="AddCurrency" type="success">Add</el-button>
+
+                </el-col>
+            </el-card>
+        </el-col>
+
         <el-col : span="24">
             <el-card class="box-card">
                 <div class="clearfix" slot="header">
@@ -26,6 +43,10 @@
         name: "Currency",
         data() {
             return {
+                request: {
+                    name: undefined,
+                    symbol: undefined
+                },
                 currencies: []
             }
         },
@@ -34,10 +55,14 @@
         },
         methods: {
             refresh: async function () {
-                const res = await axios.get('http: // localhost: 8080 /');
+                const res = await axios.get('http://localhost:8080/');
                 this.currencies = res.data.currencies;
                 console.info(this.currencies)
-            }
+            },
+            addCurrency: async function () {
+                await axios.post('http://localhost:8080/', this.request);
+                await this.refresh()
+            },
         }
     }
 </script>

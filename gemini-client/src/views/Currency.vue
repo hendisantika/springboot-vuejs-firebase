@@ -62,7 +62,7 @@
 
 <script>
     import SubHeader from "../components/SubHeader";
-    import axios from 'axios'
+    import axios from 'axios';
 
     / * eslint-disable no-console * /;
 
@@ -87,7 +87,7 @@
                 this.currencies = res.data.currencies;
                 this.request.name = undefined;
                 this.request.symbol = undefined;
-                console.info(this.currencies)
+                console.info(this.currencies);
             },
             addCurrency: async function () {
                 await axios.post('http://localhost:8080/', this.request);

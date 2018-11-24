@@ -1,5 +1,6 @@
 <template>
     <el-row>
+        <sub-header></sub-header>
         <el-col span="24">
             <el-card class="box-card box-card-wrapper">
                 <div slot="header">
@@ -60,12 +61,14 @@
 </template>
 
 <script>
-    / * eslint-disable no-console * /;
-
+    import SubHeader from "../components/SubHeader";
     import axios from 'axios'
+
+    / * eslint-disable no-console * /;
 
     export default {
         name: "Currency",
+        components: {SubHeader},
         data() {
             return {
                 request: {

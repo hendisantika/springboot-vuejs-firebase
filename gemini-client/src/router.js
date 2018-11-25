@@ -21,23 +21,23 @@ let router = new Router({
             // route level code-splitting
             // this generate a separate chunk (about. [hash] .js) for this route
             // Which is Lazy //-Loaded When The Route Is Visited.
-            component: () => import(/* WebpackChunkName: "About" */ './views/About.Vue'),
+            component: () => import(/* WebpackChunkName: "About" */'./views/About.vue'),
             meta: {requiresAuth: true}
         },
         {
             path: '/currency',
             name: 'currency',
-            component: () => import (/* webpackChunkName: "currency" */ './views/Currency.vue')
+            component: () => import (/* webpackChunkName: "currency" */'./views/Currency.vue')
         },
         {
             path: '/signup',
             name: 'signup',
-            component: () => import(/* WebpackChunkName: "Singup" */  './views/Signup.vue')
+            component: () => import(/* WebpackChunkName: "Singup" */'./views/Signup.vue')
         },
         {
             path: '/signin',
-            name: 'signin ',
-            component: () => import (/* webpackChunkName: "singin" */' ./views/Signin.vue ')
+            name: 'signin',
+            component: () => import (/* webpackChunkName: "singin" */'./views/Signin.vue ')
         }
     ]
 });

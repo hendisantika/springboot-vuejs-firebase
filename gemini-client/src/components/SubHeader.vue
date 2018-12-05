@@ -1,5 +1,5 @@
 <template>
-    <el-button @Click="signout" class="signout-Label" type="text"> Signout</el-button>
+    <el-button @click="signout" class="signout-Label" type="text"> Signout</el-button>
 </template>
 
 <script>
@@ -9,8 +9,8 @@
         name: "SubHeader",
         methods: {
             signout: function () {
-                firebase.Auth().signOut().then(() => {
-                    this.$router.push('/ Signin')
+                firebase.auth().signOut().then(() => {
+                    this.$router.push('/signin')
                 })
             }
         }

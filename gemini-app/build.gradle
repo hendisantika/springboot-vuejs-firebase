@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '3.1.9'
+        springBootVersion = '3.2.0'
     }
     repositories {
         mavenCentral()
@@ -17,7 +17,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.hendisantika.vuejs'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = 21
 
 repositories {
     mavenCentral()
